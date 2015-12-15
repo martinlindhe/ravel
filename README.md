@@ -5,7 +5,7 @@ ubique.se source repository
 web router framework: github.com/gin-gonic/gin
 orm db driver: github.com/jinzhu/gorm
 dotfile: github.com/joho/godotenv
-
+gorazor: razor template engine, github.com/sipin/gorazor
 
 STATUS: private
 
@@ -18,6 +18,10 @@ Run the watcher to generate views on the fly:
 
 
 # TODO
+
+- få gorazor att funka. eller snarare fatta hur man ska göra!
+
+- kolla in https://github.com/jteeuwen/go-bindata
 
 - use elixir for js, sass .... !!!
 

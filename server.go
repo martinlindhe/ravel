@@ -12,14 +12,17 @@ import (
 	"github.com/martinlindhe/ubique.se/server"
 )
 
-func main() {
-
+func bootstrap() {
 	err := dotenv.Load(".env")
 	if err != nil {
 		log.Fatal("Error loading .env file", err)
+		os.Exit(1)
 	}
+}
 
-	routes := server.InitRoutes()
+func main() {
+
+	bootstrap()
 
 	dbUser := dotenv.Get("DB_USER", "user")
 	dbPass := dotenv.Get("DB_PASS", "pass")
@@ -27,9 +30,9 @@ func main() {
 	dbHost := dotenv.Get("DB_HOST", "localhost")
 	dbPort := dotenv.GetInt("DB_PORT", 3306)
 
-	db, err := server.InitDB(dbHost, dbPort, dbUser, dbPass, dbName)
+	db, err := db.InitDB(dbHost, dbPort, dbUser, dbPass, dbName)
 	if err != nil {
-		fmt.Printf("Error connecting to database: %s\n", err)
+		log.Fatalf("Error connecting to database: %s\n", err)
 		os.Exit(1)
 	}
 	defer db.Close()
@@ -42,6 +45,8 @@ func main() {
 	seed.Seed(&db)
 
 	fmt.Println(db)
+
+	routes := server.InitRoutes()
 
 	routes.Run(":8080") // listen and serve on 0.0.0.0:8080
 }

@@ -5,7 +5,7 @@ import (
 	"tpl/layout"
 )
 
-func Index(body string, sidebar string, footer string, title string, css string, js string) string {
+func Index() string {
 	var _buffer bytes.Buffer
 
 	title := func() string {
