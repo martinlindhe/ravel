@@ -10,9 +10,18 @@ dotfile: github.com/joho/godotenv
 STATUS: private
 
 
+# Views
+
+Run the watcher to generate views on the fly:
+
+    gorazor -watch tpl views
+
+
 # TODO
 
 - use elixir for js, sass .... !!!
+
+- views: blade liknande. gorazor https://github.com/sipin/gorazor
 
 
 tests:

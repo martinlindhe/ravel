@@ -7,6 +7,7 @@ import (
 	"github.com/gin-gonic/contrib/gzip"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
+	"github.com/martinlindhe/ubique.se/tpl"
 )
 
 func InitDB(host string, port int, user string, password string, database string) (gorm.DB, error) {
@@ -57,6 +58,8 @@ func InitRoutes() *gin.Engine {
 	r.Use(gin.Logger())
 
 	r.Use(gzip.Gzip(gzip.DefaultCompression))
+
+	r.GET("/", tpl.Index)
 
 	r.GET("/ping", pingController)
 
