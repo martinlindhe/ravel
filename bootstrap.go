@@ -17,4 +17,6 @@ func Bootstrap() {
 	}
 
 	i18n.MustLoadTranslationFile("resources/lang/en-US.yaml")
+
+	routerInstance = initRouter()
 }

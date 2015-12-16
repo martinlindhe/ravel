@@ -5,7 +5,7 @@ deps:
 	npm install
 
 serve:
-	go run app.go
+	go run ./cli/server/server.go
 
 ping:
 	curl "http://localhost:8080/ping"

@@ -4,16 +4,37 @@ import (
 	"fmt"
 	"log"
 
-	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql" // for mysql support
 	"github.com/jinzhu/gorm"
 	"github.com/martinlindhe/ravel/env"
-	_ "github.com/mattn/go-sqlite3"
+	_ "github.com/mattn/go-sqlite3" // for sqlite3 support
 )
 
-// InitDB sets up the database connection
+// InitDB sets up the database connection from your .env settings
 func InitDB() (gorm.DB, error) {
 
 	driver := env.Get("DB_DRIVER", "sqlite3")
+	connectionString := generateConnectionString(driver)
+
+	log.Printf("Connecting to %s", connectionString)
+
+	db, err := gorm.Open(driver, connectionString)
+	if err != nil {
+		fmt.Printf("Connection failed: %s\n", connectionString)
+		return db, err
+	}
+
+	// Open doesn't open a connection. Validate DSN data:
+	err = db.DB().Ping()
+	if err != nil {
+		return db, err
+	}
+
+	return db, nil
+}
+
+func generateConnectionString(driver string) string {
+
 	user := env.Get("DB_USER", "root")
 	password := env.Get("DB_PASS", "")
 	database := env.Get("DB_NAME", "ravel")
@@ -44,23 +65,5 @@ func InitDB() (gorm.DB, error) {
 		connectionString = user + ":" + password + "@" + protHost + "/" + database +
 			"?charset=utf8&parseTime=True" //&loc=Local"
 	}
-
-	log.Printf("Connecting to %s", connectionString)
-
-	db, err := gorm.Open(driver, connectionString)
-	if err != nil {
-		fmt.Printf("Connection failed: %s\n", connectionString)
-		return db, err
-	}
-
-	// Open doesn't open a connection. Validate DSN data:
-	err = db.DB().Ping()
-	if err != nil {
-		return db, err
-	}
-
-	//db.DB().SetMaxIdleConns(10)
-	//db.DB().SetMaxOpenConns(100)
-
-	return db, nil
+	return connectionString
 }

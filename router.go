@@ -1,9 +1,15 @@
-package router
+package ravel
 
 import "github.com/gin-gonic/gin"
 
+var routerInstance *gin.Engine
+
+func GetRouter() *gin.Engine {
+	return routerInstance
+}
+
 // Init boots up Gin for routing, https://gin-gonic.github.io/gin/
-func Init() *gin.Engine {
+func initRouter() *gin.Engine {
 
 	// Creates a router without any middleware by default
 	r := gin.New()

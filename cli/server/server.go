@@ -8,7 +8,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/martinlindhe/ravel"
 	"github.com/martinlindhe/ravel/env"
-	"github.com/martinlindhe/ravel/router"
 	"github.com/martinlindhe/ravel/views"
 )
 
@@ -28,12 +27,15 @@ func main() {
 	// Enable Logger
 	db.LogMode(true)
 
+	//db.DB().SetMaxIdleConns(10)
+	//db.DB().SetMaxOpenConns(100)
+
 	ravel.Migrate(&db)
 	ravel.Seed(&db)
 
 	fmt.Println(db)
 
-	r := router.Init()
+	r := ravel.GetRouter()
 
 	// r.GET("/", views.Index()) // XXX: cant get this form to work with gorazor views
 	r.GET("/", func(c *gin.Context) {

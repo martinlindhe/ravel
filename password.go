@@ -2,7 +2,7 @@ package ravel
 
 import "golang.org/x/crypto/bcrypt"
 
-// HashPassword used bcrypt, returns a hex string
+// HashPassword uses bcrypt, returns a 60 character hex string
 func HashPassword(pwd string) string {
 
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(pwd), bcrypt.DefaultCost)
