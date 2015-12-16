@@ -17,7 +17,7 @@ import (
 )
 
 func bootstrap() {
-	err := dotenv.Load(".env")
+	err := env.Load(".env")
 	if err != nil {
 		log.Fatal("Error loading .env file", err)
 		os.Exit(1)
@@ -66,6 +66,8 @@ func main() {
 
 	// listen and serve on 0.0.0.0:8080
 	listenAt := fmt.Sprintf(":%d", appPort)
+
+	log.Printf("Starting http server on %s\n", listenAt)
 
 	r.Run(listenAt)
 }
