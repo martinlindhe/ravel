@@ -1,6 +1,8 @@
 
-up: create users
-    add:
+up:
+    action: add table
+    table: users
+    parameters:
         id:         int:increments
         name:       string:100
         email:      string:200
@@ -10,4 +12,6 @@ up: create users
         updated_at: datetime
         deleted_at: datetime
 
-down: drop users
+down:
+    action: drop table
+    table: users

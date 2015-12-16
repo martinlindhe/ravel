@@ -1,9 +1,13 @@
 #
 
-up: update users
-    add:
+up:
+    action: update table
+    table: users
+    parameters:
         avatar_id:         string:nullable
 
-down: update users
-    remove:
+down:
+    action: drop column
+    table: users
+    parameters:
         avatar_id
