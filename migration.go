@@ -1,4 +1,4 @@
-package migration
+package ravel
 
 import (
 	"fmt"
@@ -7,13 +7,9 @@ import (
 	"github.com/martinlindhe/ravel/model"
 )
 
-// XXX function that ROLLS BACK all migrations
-
 func Migrate(db *gorm.DB) {
 
 	fmt.Println("Running migrations ...")
-
-	db.DB() // wake up db
 
 	db.Set("gorm:table_options", "ENGINE=InnoDB")
 
@@ -35,9 +31,7 @@ func Migrate(db *gorm.DB) {
 }
 
 func Rollback(db *gorm.DB) {
-	//XXXX
-
-	db.DB() // wake up db
+	// XXX function that ROLLS BACK all migrations
 
 	fmt.Printf("Rolling back migrations... \n")
 	user_create_Down(db)

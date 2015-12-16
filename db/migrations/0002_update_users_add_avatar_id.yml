@@ -1,0 +1,9 @@
+#
+
+up: update users
+    add:
+        avatar_id:         string:nullable
+
+down: update users
+    remove:
+        avatar_id

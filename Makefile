@@ -6,3 +6,6 @@ deps:
 
 serve:
 	go run app.go
+
+ping:
+	curl "http://localhost:8080/ping"

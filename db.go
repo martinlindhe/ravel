@@ -1,15 +1,17 @@
-package db
+package ravel
 
 import (
 	"fmt"
 	"log"
 
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/gorm"
 	"github.com/martinlindhe/ravel/env"
+	_ "github.com/mattn/go-sqlite3"
 )
 
-// Init sets up the database connection
-func Init() (gorm.DB, error) {
+// InitDB sets up the database connection
+func InitDB() (gorm.DB, error) {
 
 	driver := env.Get("DB_DRIVER", "sqlite3")
 	user := env.Get("DB_USER", "root")
@@ -23,8 +25,8 @@ func Init() (gorm.DB, error) {
 	switch {
 	case driver == "sqlite3":
 		// XXX need helper func to get folder root
-
 		connectionString = env.Get("DB_FILE", "./app.db")
+
 	case driver == "mysql":
 		protHost := ""
 
@@ -41,7 +43,6 @@ func Init() (gorm.DB, error) {
 
 		connectionString = user + ":" + password + "@" + protHost + "/" + database +
 			"?charset=utf8&parseTime=True" //&loc=Local"
-
 	}
 
 	log.Printf("Connecting to %s", connectionString)

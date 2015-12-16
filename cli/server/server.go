@@ -6,34 +6,19 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
-	_ "github.com/go-sql-driver/mysql"
-	"github.com/martinlindhe/ravel/db"
+	"github.com/martinlindhe/ravel"
 	"github.com/martinlindhe/ravel/env"
-	"github.com/martinlindhe/ravel/migration"
 	"github.com/martinlindhe/ravel/router"
-	"github.com/martinlindhe/ravel/seed"
 	"github.com/martinlindhe/ravel/views"
-	_ "github.com/mattn/go-sqlite3"
-	"github.com/nicksnyder/go-i18n/i18n"
 )
-
-func bootstrap() {
-	err := env.Load(".env")
-	if err != nil {
-		log.Fatal("Error loading .env file", err)
-		os.Exit(1)
-	}
-
-	i18n.MustLoadTranslationFile("resources/lang/en-US.yaml")
-}
 
 func main() {
 
-	bootstrap()
+	ravel.Bootstrap()
 
 	appPort := env.GetInt("APP_PORT", 8080)
 
-	db, err := db.Init()
+	db, err := ravel.InitDB()
 	if err != nil {
 		log.Fatalf("Error connecting to database: %s\n", err)
 		os.Exit(1)
@@ -43,17 +28,14 @@ func main() {
 	// Enable Logger
 	db.LogMode(true)
 
-	migration.Migrate(&db)
-
-	seed.Seed(&db)
+	ravel.Migrate(&db)
+	ravel.Seed(&db)
 
 	fmt.Println(db)
 
 	r := router.Init()
 
-	// XXX  cannot use tpl.Index (type func() string) as type gin.HandlerFunc in argument to r.RouterGroup.GET
-	//r.GET("/", tpl.Index())
-
+	// r.GET("/", views.Index()) // XXX: cant get this form to work with gorazor views
 	r.GET("/", func(c *gin.Context) {
 		c.Header("Content-Type", "text/html; charset=utf-8")
 		c.String(200, views.Index())

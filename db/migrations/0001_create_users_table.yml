@@ -1,0 +1,30 @@
+# TODO: cli that generates this file based on Model name (and existing model when cmd is run)
+
+up: create users
+    columns:
+        id:         int:increments
+        name:       string:100
+        email:      string:200
+        password:   string:60
+        token:      auth_token
+        created_at: datetime
+        updated_at: datetime
+        deleted_at: datetime
+
+down: drop users
+
+
+
+Schema::create('users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name', 100);
+            $table->string('email', 200)->unique()->nullable();
+            $table->string('password', 60);
+
+            $table->string('avatar', 200)->nullable();
+            $table->tinyInteger('oauth')->unsigned()->nullable();
+            $table->string('oauth_id', 40)->nullable();
+
+            $table->rememberToken();
+            $table->timestamps();
+        });

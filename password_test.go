@@ -1,4 +1,4 @@
-package password
+package ravel
 
 import (
 	"testing"
@@ -6,12 +6,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestPassword(t *testing.T) {
+func TestHashPassword(t *testing.T) {
 
 	clear := "password"
-	hash1 := Make(clear)
-	hash2 := Make(clear)
-	hash3 := Make(clear)
+	hash1 := HashPassword(clear)
+	hash2 := HashPassword(clear)
+	hash3 := HashPassword(clear)
 
 	// always 60 characters
 	assert.Equal(t, 60, len(hash1))

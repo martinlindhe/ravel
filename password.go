@@ -1,9 +1,9 @@
-package password
+package ravel
 
 import "golang.org/x/crypto/bcrypt"
 
-// Make hashes input using bcrypt, returns a hex string
-func Make(pwd string) string {
+// HashPassword used bcrypt, returns a hex string
+func HashPassword(pwd string) string {
 
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(pwd), bcrypt.DefaultCost)
 	if err != nil {
