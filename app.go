@@ -13,6 +13,7 @@ import (
 	"github.com/martinlindhe/ravel/router"
 	"github.com/martinlindhe/ravel/seed"
 	"github.com/martinlindhe/ravel/views"
+	_ "github.com/mattn/go-sqlite3"
 	"github.com/nicksnyder/go-i18n/i18n"
 )
 
@@ -30,15 +31,9 @@ func main() {
 
 	bootstrap()
 
-	dbUser := env.Get("DB_USER", "user")
-	dbPass := env.Get("DB_PASS", "pass")
-	dbName := env.Get("DB_NAME", "ubique")
-	dbHost := env.Get("DB_HOST", "localhost")
-	dbPort := env.GetInt("DB_PORT", 3306)
-
 	appPort := env.GetInt("APP_PORT", 8080)
 
-	db, err := db.Init("mysql", dbHost, dbPort, dbUser, dbPass, dbName)
+	db, err := db.Init()
 	if err != nil {
 		log.Fatalf("Error connecting to database: %s\n", err)
 		os.Exit(1)
