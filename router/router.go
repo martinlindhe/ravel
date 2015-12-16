@@ -1,10 +1,6 @@
 package router
 
-import (
-	"github.com/gin-gonic/contrib/gzip"
-	"github.com/gin-gonic/gin"
-	"github.com/martinlindhe/ubique.se/t"
-)
+import "github.com/gin-gonic/gin"
 
 // Init boots up Gin for routing, https://gin-gonic.github.io/gin/
 func Init() *gin.Engine {
@@ -15,7 +11,7 @@ func Init() *gin.Engine {
 	// Global middleware
 	r.Use(gin.Logger())
 
-	r.Use(gzip.Gzip(gzip.DefaultCompression))
+	//	r.Use(gzip.Gzip(gzip.DefaultCompression))
 
 	r.GET("/ping", pingController)
 
@@ -31,5 +27,5 @@ func Init() *gin.Engine {
 
 // curl -v "http://localhost:8080/ping"
 func pingController(c *gin.Context) {
-	c.String(200, "pong "+t.T("hello_world"))
+	c.JSON(200, gin.H{"pong": "now"})
 }

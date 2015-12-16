@@ -5,17 +5,15 @@ import (
 	"log"
 	"os"
 
+	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/martinlindhe/ubique.se/db"
 	"github.com/martinlindhe/ubique.se/dotenv"
 	"github.com/martinlindhe/ubique.se/migration"
 	"github.com/martinlindhe/ubique.se/router"
 	"github.com/martinlindhe/ubique.se/seed"
+	"github.com/martinlindhe/ubique.se/views"
 	"github.com/nicksnyder/go-i18n/i18n"
-	"github.com/sipin/gorazor/docs/hello/src/tpl"
-
-	//"github.com/martinlindhe/ubique.se/tpl"
-	//_ "github.com/martinlindhe/ubique.se/tpl/layout"
 )
 
 func bootstrap() {
@@ -56,7 +54,13 @@ func main() {
 
 	r := router.Init()
 
-	r.GET("/", tpl.Index)
+	// XXX  cannot use tpl.Index (type func() string) as type gin.HandlerFunc in argument to r.RouterGroup.GET
+	//r.GET("/", tpl.Index())
+
+	r.GET("/", func(c *gin.Context) {
+		c.Header("Content-Type", "text/html; charset=utf-8")
+		c.String(200, views.Index())
+	})
 
 	r.Run(":8080") // listen and serve on 0.0.0.0:8080
 }
