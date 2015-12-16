@@ -52,7 +52,7 @@ func GetBool(key string, defaultVal bool) bool {
 	}
 
 	val = strings.ToLower(val)
-	if val == "true" || val == "yes" || val == "on" {
+	if val == "true" || val == "yes" || val == "on" || val == "1" {
 		return true
 	}
 

@@ -21,7 +21,9 @@ func TestGet(t *testing.T) {
 		"BOOL1=YES\n" +
 		"BOOL2=ON\n" +
 		"BOOL3=TRUE\n" +
-		"BOOL4=false\n")
+		"BOOL4=1\n" +
+		"BOOL5=false\n",
+	)
 
 	err := ioutil.WriteFile(envFile, d, 0644)
 	if err != nil {
@@ -40,7 +42,8 @@ func TestGet(t *testing.T) {
 	assert.Equal(t, true, GetBool("BOOL1", false))
 	assert.Equal(t, true, GetBool("BOOL2", false))
 	assert.Equal(t, true, GetBool("BOOL3", false))
-	assert.Equal(t, false, GetBool("BOOL4", true))
+	assert.Equal(t, true, GetBool("BOOL4", false))
+	assert.Equal(t, false, GetBool("BOOL5", true))
 
 	assert.Equal(t, true, GetBool("NOTFOUNDBOOL", true))
 	assert.Equal(t, false, GetBool("NOTFOUNDBOOL", false))
