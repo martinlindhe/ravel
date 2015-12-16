@@ -1,6 +1,6 @@
 <template>
     <div>
-        whopp main
+        main page
     </div>
 </template>
 

@@ -24,7 +24,9 @@ Run the watcher to generate views on the fly:
 
 - check out https://github.com/jteeuwen/go-bindata
 
-- jwt: https://github.com/dgrijalva/jwt-go
+
+
+- jwt by default: https://github.com/dgrijalva/jwt-go
 
 # TODO cli app
     - something similar to artisan

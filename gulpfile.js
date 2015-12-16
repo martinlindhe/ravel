@@ -21,7 +21,7 @@ elixir(function(mix) {
 */
 /*
         .browserSync({
-            proxy: 'beta.whopp.app'
+            proxy: 'example.app'
         })
 */
         .copy(

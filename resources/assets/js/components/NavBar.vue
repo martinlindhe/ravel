@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" v-link="{ path: '/' }">whopp</a>
+                <a class="navbar-brand" v-link="{ path: '/' }">brand name</a>
             </bootstrap-dropdown-collapse>
 
             <div class="collapse navbar-collapse" id="navbar-collapse-top">

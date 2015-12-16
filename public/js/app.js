@@ -17637,7 +17637,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/App.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/App.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -17859,7 +17859,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/BootstrapAlert.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/BootstrapAlert.vue"
   module.hot.dispose(function () {
     require("vueify-insert-css").cache["\n.fade-transition {\n    -webkit-transition: opacity 0.3s ease;\n    transition: opacity 0.3s ease;\n}\n.fade-enter, .fade-leave {\n    height: 0;\n    opacity: 0;\n}\n.alert.top {\n    position: fixed;\n    top: 30px;\n    margin: 0 auto;\n    left: 0;\n    right: 0;\n    z-index: 2;\n}\n.alert.top-right {\n    position: fixed;\n    top: 30px;\n    right: 50px;\n    z-index: 2;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
@@ -17919,7 +17919,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/BootstrapDropdownCollapse.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/BootstrapDropdownCollapse.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -17970,7 +17970,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/BootstrapDropdownToggle.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/BootstrapDropdownToggle.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -17992,7 +17992,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/Breadcrumb.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/Breadcrumb.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18053,7 +18053,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/CookieInfo.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/CookieInfo.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18081,12 +18081,12 @@ exports['default'] = {
     }
 };
 module.exports = exports['default'];
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\n    <footer class=\"footer\">\n\n        <pre>            route params: {{$route.params | json}}\n            {{ $root.$data | json }}\n        </pre>\n\n        <div class=\"row\">\n            <div class=\"col-sm-6 col-sm-offset-2\">\n                <a href=\"/forum\">{{ $t('nav.forum') }}</a> |\n                <a v-link=\"{ path: '/contact' }\">{{ $t('nav.contact') }}</a>\n                | <a href=\"/help\">{{ $t('nav.help') }}</a>\n                | <a href=\"/support\">{{ $t('nav.support') }}</a>\n                | <a href=\"/about\">{{ $t('nav.about') }}</a><br>\n                <div class=\"footer_corp\">© {{ new Date().getFullYear() }} Ubique</div>\n            </div>\n            <div class=\"col-sm-4 pull-right\">\n                <language-chooser></language-chooser>\n            </div>\n        </div>\n    </footer>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n\n    <footer class=\"footer\">\n\n        <pre>            route params: {{$route.params | json}}\n            {{ $root.$data | json }}\n        </pre>\n\n        <div class=\"row\">\n            <div class=\"col-sm-6 col-sm-offset-2\">\n                <a href=\"/forum\">{{ $t('nav.forum') }}</a> |\n                <a v-link=\"{ path: '/contact' }\">{{ $t('nav.contact') }}</a>\n                | <a href=\"/help\">{{ $t('nav.help') }}</a>\n                | <a href=\"/support\">{{ $t('nav.support') }}</a>\n                | <a href=\"/about\">{{ $t('nav.about') }}</a><br>\n                <div class=\"footer_corp\">© {{ new Date().getFullYear() }} Example, Inc.</div>\n            </div>\n            <div class=\"col-sm-4 pull-right\">\n                <language-chooser></language-chooser>\n            </div>\n        </div>\n    </footer>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/Footer/Corporate.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/Footer/Corporate.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18132,7 +18132,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/LanguageChooser.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/LanguageChooser.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18170,12 +18170,12 @@ exports['default'] = {
     }
 };
 module.exports = exports['default'];
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n    <nav class=\"navbar navbar-custom navbar-fixed-top\">\n        <div class=\"container-fluid\">\n\n            <bootstrap-dropdown-collapse>\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse-top\">\n                    <span class=\"sr-only\">Toggle navigation</span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                </button>\n                <a class=\"navbar-brand\" v-link=\"{ path: '/' }\">whopp</a>\n            </bootstrap-dropdown-collapse>\n\n            <div class=\"collapse navbar-collapse\" id=\"navbar-collapse-top\">\n                <ul class=\"nav navbar-nav navbar-right\">\n\n                    <bootstrap-dropdown-toggle v-if=\"$root.token &amp;&amp; $root.shop\">\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                            <i class=\"fa fa-home\"></i> {{ $root.shop.name }}\n                            <span class=\"caret\"></span>\n                        </a>\n\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n                            <li><a v-link=\"{ path: '/shop/show/' + $root.shop.id }\">{{ $t('nav.overview') }}</a></li>\n                            <li class=\"divider\"></li>\n                            <li><h4>{{ $t('nav.settings') }}</h4></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/overview\">{{ $t('nav.overview') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/name/overview\">{{ $t('nav.name') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/order/overview\">{{ $t('nav.orders') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/company/overview\">{{ $t('nav.company') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/bank/overview\">{{ $t('nav.bank_accounts') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/contact/overview\">{{ $t('nav.contact') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/theme/overview\">{{ $t('nav.theme') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/text/overview\">{{ $t('nav.text') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/language/overview\">{{ $t('nav.language') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/product/overview\">{{ $t('nav.product') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/plugin/overview\">{{ $t('nav.plugins') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/logo/overview\">{{ $t('nav.logo') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/background/overview\">{{ $t('nav.backgrounds') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/campaign/overview\">{{ $t('nav.campaigns') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/extra/overview\">{{ $t('nav.extras') }}</a></li>\n\n                            <!--if (shop.hasExtra('message') -->\n                            <li role=\"presentation\"><a href=\"/shop/setting/extra/message/overview\">{{ $t('nav.messages') }}</a></li>\n\n                            <!-- if (shop.hasExtra('faq')) -->\n                            <li role=\"presentation\"><a href=\"/shop/setting/extra/faq/overview\">{{ $t('nav.faq') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/user/overview\">{{ $t('nav.users') }} <span class=\"badge\">X</span></a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/host/overview\">{{ $t('nav.hosts') }}</a></li>\n                        </ul>\n                    </bootstrap-dropdown-toggle>\n\n\n                    <bootstrap-dropdown-toggle v-show=\"$root.token\">\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                            <i class=\"fa fa-shopping-cart\"></i> {{ $t('nav.shops') }} <span class=\"caret\"></span>\n                        </a>\n\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n\n                            <li v-for=\"shop in $root.shops\">\n                                <a v-link=\"{ path: '/shop/show/' + shop.id }\">\n                                    <i class=\"fa fa-arrow-right fa-fw\"></i>&nbsp; {{ shop.name }}\n                                </a>\n                            </li>\n\n                            <li class=\"divider\"></li>\n                            <li><a href=\"/shop/create\"><i class=\"fa fa-plus fa-fw\"></i>&nbsp; {{ $t('nav.new_shop') }}</a></li>\n                        </ul>\n                    </bootstrap-dropdown-toggle>\n\n                    <bootstrap-dropdown-toggle v-show=\"$root.token\">\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                            {{ $root.username }} <span class=\"caret\"></span>\n                        </a>\n\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n                            <li><a href=\"/user/setting/overview\"><i class=\"fa fa-cogs fa-fw\"></i>&nbsp; {{ $t('nav.settings') }}</a></li>\n                            <li><a href=\"/user/account/overview\"><i class=\"fa fa-user fa-fw\"></i>&nbsp; {{ $t('nav.account') }}</a></li>\n                            <li><a href=\"/user/subscription/overview\"><i class=\"fa fa-money fa-fw\"></i>&nbsp; {{ $t('nav.subscription') }}</a></li>\n                            <li class=\"divider\"></li>\n                            <li><a href=\"/server/setting/overview\"><i class=\"fa fa-server fa-fw\"></i>&nbsp; {{ $t('nav.server') }}</a></li>\n                            <li class=\"divider\"></li>\n                            <li><a href=\"#\" @click=\"$root.logout\"><i class=\"fa fa-sign-out fa-fw\"></i>&nbsp; {{ $t('nav.sign_out') }}</a></li>\n                        </ul>\n                    </bootstrap-dropdown-toggle>\n\n                    <li v-show=\"!$root.token\">\n                        <a v-link=\"{ path: '/auth/register' }\"><i class=\"fa fa-plus fa-fw\"></i>{{ $t('user.new') }}</a>\n                    </li>\n\n                    <li v-show=\"!$root.token\">\n                        <a v-link=\"{ path: '/auth/login' }\"><i class=\"fa fa-sign-in fa-fw\"></i>{{ $t('nav.sign_in') }}</a>\n                    </li>\n\n                </ul>\n            </div>\n        </div>\n    </nav>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n    <nav class=\"navbar navbar-custom navbar-fixed-top\">\n        <div class=\"container-fluid\">\n\n            <bootstrap-dropdown-collapse>\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar-collapse-top\">\n                    <span class=\"sr-only\">Toggle navigation</span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                </button>\n                <a class=\"navbar-brand\" v-link=\"{ path: '/' }\">brand name</a>\n            </bootstrap-dropdown-collapse>\n\n            <div class=\"collapse navbar-collapse\" id=\"navbar-collapse-top\">\n                <ul class=\"nav navbar-nav navbar-right\">\n\n                    <bootstrap-dropdown-toggle v-if=\"$root.token &amp;&amp; $root.shop\">\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                            <i class=\"fa fa-home\"></i> {{ $root.shop.name }}\n                            <span class=\"caret\"></span>\n                        </a>\n\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n                            <li><a v-link=\"{ path: '/shop/show/' + $root.shop.id }\">{{ $t('nav.overview') }}</a></li>\n                            <li class=\"divider\"></li>\n                            <li><h4>{{ $t('nav.settings') }}</h4></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/overview\">{{ $t('nav.overview') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/name/overview\">{{ $t('nav.name') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/order/overview\">{{ $t('nav.orders') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/company/overview\">{{ $t('nav.company') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/bank/overview\">{{ $t('nav.bank_accounts') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/contact/overview\">{{ $t('nav.contact') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/theme/overview\">{{ $t('nav.theme') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/text/overview\">{{ $t('nav.text') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/language/overview\">{{ $t('nav.language') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/product/overview\">{{ $t('nav.product') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/plugin/overview\">{{ $t('nav.plugins') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/logo/overview\">{{ $t('nav.logo') }}</a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/background/overview\">{{ $t('nav.backgrounds') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/campaign/overview\">{{ $t('nav.campaigns') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/extra/overview\">{{ $t('nav.extras') }}</a></li>\n\n                            <!--if (shop.hasExtra('message') -->\n                            <li role=\"presentation\"><a href=\"/shop/setting/extra/message/overview\">{{ $t('nav.messages') }}</a></li>\n\n                            <!-- if (shop.hasExtra('faq')) -->\n                            <li role=\"presentation\"><a href=\"/shop/setting/extra/faq/overview\">{{ $t('nav.faq') }}</a></li>\n\n                            <li role=\"presentation\"><a href=\"/shop/setting/user/overview\">{{ $t('nav.users') }} <span class=\"badge\">X</span></a></li>\n                            <li role=\"presentation\"><a href=\"/shop/setting/host/overview\">{{ $t('nav.hosts') }}</a></li>\n                        </ul>\n                    </bootstrap-dropdown-toggle>\n\n\n                    <bootstrap-dropdown-toggle v-show=\"$root.token\">\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                            <i class=\"fa fa-shopping-cart\"></i> {{ $t('nav.shops') }} <span class=\"caret\"></span>\n                        </a>\n\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n\n                            <li v-for=\"shop in $root.shops\">\n                                <a v-link=\"{ path: '/shop/show/' + shop.id }\">\n                                    <i class=\"fa fa-arrow-right fa-fw\"></i>&nbsp; {{ shop.name }}\n                                </a>\n                            </li>\n\n                            <li class=\"divider\"></li>\n                            <li><a href=\"/shop/create\"><i class=\"fa fa-plus fa-fw\"></i>&nbsp; {{ $t('nav.new_shop') }}</a></li>\n                        </ul>\n                    </bootstrap-dropdown-toggle>\n\n                    <bootstrap-dropdown-toggle v-show=\"$root.token\">\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\">\n                            {{ $root.username }} <span class=\"caret\"></span>\n                        </a>\n\n                        <ul class=\"dropdown-menu\" role=\"menu\">\n                            <li><a href=\"/user/setting/overview\"><i class=\"fa fa-cogs fa-fw\"></i>&nbsp; {{ $t('nav.settings') }}</a></li>\n                            <li><a href=\"/user/account/overview\"><i class=\"fa fa-user fa-fw\"></i>&nbsp; {{ $t('nav.account') }}</a></li>\n                            <li><a href=\"/user/subscription/overview\"><i class=\"fa fa-money fa-fw\"></i>&nbsp; {{ $t('nav.subscription') }}</a></li>\n                            <li class=\"divider\"></li>\n                            <li><a href=\"/server/setting/overview\"><i class=\"fa fa-server fa-fw\"></i>&nbsp; {{ $t('nav.server') }}</a></li>\n                            <li class=\"divider\"></li>\n                            <li><a href=\"#\" @click=\"$root.logout\"><i class=\"fa fa-sign-out fa-fw\"></i>&nbsp; {{ $t('nav.sign_out') }}</a></li>\n                        </ul>\n                    </bootstrap-dropdown-toggle>\n\n                    <li v-show=\"!$root.token\">\n                        <a v-link=\"{ path: '/auth/register' }\"><i class=\"fa fa-plus fa-fw\"></i>{{ $t('user.new') }}</a>\n                    </li>\n\n                    <li v-show=\"!$root.token\">\n                        <a v-link=\"{ path: '/auth/login' }\"><i class=\"fa fa-sign-in fa-fw\"></i>{{ $t('nav.sign_in') }}</a>\n                    </li>\n\n                </ul>\n            </div>\n        </div>\n    </nav>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/NavBar.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/NavBar.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18212,7 +18212,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/ShopNavBar.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/ShopNavBar.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18250,7 +18250,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/components/WhenForHumans.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/components/WhenForHumans.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18362,7 +18362,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/views/Auth/Login.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/views/Auth/Login.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18419,7 +18419,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/views/Auth/Register.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/views/Auth/Register.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18432,7 +18432,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/views/Corporate/Contact.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/views/Corporate/Contact.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18449,12 +18449,12 @@ exports["default"] = {
     }
 };
 module.exports = exports["default"];
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n    <div>\n        whopp main\n    </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n    <div>\n        main page\n    </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/views/Main.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/views/Main.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18496,7 +18496,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/views/Shop/Products.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/views/Shop/Products.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18548,7 +18548,7 @@ if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
-  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ubique.se/resources/assets/js/views/Shop/Show.vue"
+  var id = "/Users/m/dev/go/src/github.com/martinlindhe/ravel/resources/assets/js/views/Shop/Show.vue"
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
@@ -18570,7 +18570,7 @@ exports["default"] = {
             "new_password": "New Password",
             "change_password": "Change Password",
             "cookie_banner": "We use cookies so that the service works for you. By using our website, you agree to our use of cookies.",
-            "your_activation_code_is_code": "Your whopp activation code is {code}",
+            "your_activation_code_is_code": "Your activation code is {code}",
             "enter_new_password_below": "Enter your new password below",
             "sign_in_with_your_social_network": "Sign In With Your Social Network Account",
             "or_login_with_existing_account": "Or log in with existing account below",
@@ -18706,7 +18706,7 @@ exports["default"] = {
             "phone_activate_1": "A code has been sent to your phone, please enter it below",
             "password_reset_1": "Enter your e-mail below so we can send you a password reset link",
             "old_ie": "Your browser is too old, please update to <a target=\"_blank\" href=\"{link}\">IE 10<\/a>",
-            "contact_1": "We want to hear from you! You can reach us any time at <a href=\"mailto:support@whopp.se\">\""
+            "contact_1": "We want to hear from you! You can reach us any time at <a href=\"mailto:support@example.com\">\""
         },
         "language": {
             "sv_se": "Swedish",
@@ -18881,7 +18881,7 @@ exports["default"] = {
             "price_in": "Price in",
             "from": "from",
             "change": "Change",
-            "default_title": "whopp - next gen web shops",
+            "default_title": "Default title",
             "street": "Street",
             "street_number": "Street number",
             "zipcode": "Zipcode",
@@ -19144,7 +19144,7 @@ exports["default"] = {
             "new_password": "Ditt nya lösenord",
             "change_password": "Ändra Lösenord",
             "cookie_banner": "Vi använder kakor för att tjänsten ska fungera för dig. Genom att använda vår tjänst så godkänner du vårt användande av kakor.",
-            "your_activation_code_is_code": "Din whopp-aktiveringskod är {code}",
+            "your_activation_code_is_code": "Din aktiveringskod är {code}",
             "enter_new_password_below": "Ange ditt nya lösenord nedan",
             "sign_in_with_your_social_network": "Logga in med ditt sociala nätverk",
             "or_login_with_existing_account": "Eller logga in med ditt konto nedan",
@@ -19280,7 +19280,7 @@ exports["default"] = {
             "phone_activate_1": "En aktiveringskod har skickats till din telefon, ange den här nedan",
             "password_reset_1": "Ange din e-post nedan så vi kan skicka en återställningslänk",
             "old_ie": "Din webbläsare är för gammal, var vänlig uppdatera till <a target=\"_blank\" href=\"{link}\">IE 10<\/a>",
-            "contact_1": "Vi vill gärna höra ifrån dig! Du kan nå oss när som helst på <a href=\"mailto:support@whopp.se\">\""
+            "contact_1": "Vi vill gärna höra ifrån dig! Du kan nå oss när som helst på <a href=\"mailto:support@example.com\">\""
         },
         "language": {
             "sv_se": "Svenska",
@@ -19455,7 +19455,7 @@ exports["default"] = {
             "price_in": "Pris i",
             "from": "från",
             "change": "Ändra",
-            "default_title": "whopp - nästa generations e-handel",
+            "default_title": "Standardtitel",
             "street": "Gata",
             "street_number": "Gatunummer",
             "zipcode": "Postnummer",
