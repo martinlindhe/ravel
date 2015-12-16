@@ -7,7 +7,7 @@ export default {
             "new_password": "New Password",
             "change_password": "Change Password",
             "cookie_banner": "We use cookies so that the service works for you. By using our website, you agree to our use of cookies.",
-            "your_activation_code_is_code": "Your whopp activation code is {code}",
+            "your_activation_code_is_code": "Your activation code is {code}",
             "enter_new_password_below": "Enter your new password below",
             "sign_in_with_your_social_network": "Sign In With Your Social Network Account",
             "or_login_with_existing_account": "Or log in with existing account below",
@@ -143,7 +143,7 @@ export default {
             "phone_activate_1": "A code has been sent to your phone, please enter it below",
             "password_reset_1": "Enter your e-mail below so we can send you a password reset link",
             "old_ie": "Your browser is too old, please update to <a target=\"_blank\" href=\"{link}\">IE 10<\/a>",
-            "contact_1": "We want to hear from you! You can reach us any time at <a href=\"mailto:support@whopp.se\">\""
+            "contact_1": "We want to hear from you! You can reach us any time at <a href=\"mailto:support@example.com\">\""
         },
         "language": {
             "sv_se": "Swedish",
@@ -318,7 +318,7 @@ export default {
             "price_in": "Price in",
             "from": "from",
             "change": "Change",
-            "default_title": "whopp - next gen web shops",
+            "default_title": "Default title",
             "street": "Street",
             "street_number": "Street number",
             "zipcode": "Zipcode",
@@ -581,7 +581,7 @@ export default {
             "new_password": "Ditt nya lösenord",
             "change_password": "Ändra Lösenord",
             "cookie_banner": "Vi använder kakor för att tjänsten ska fungera för dig. Genom att använda vår tjänst så godkänner du vårt användande av kakor.",
-            "your_activation_code_is_code": "Din whopp-aktiveringskod är {code}",
+            "your_activation_code_is_code": "Din aktiveringskod är {code}",
             "enter_new_password_below": "Ange ditt nya lösenord nedan",
             "sign_in_with_your_social_network": "Logga in med ditt sociala nätverk",
             "or_login_with_existing_account": "Eller logga in med ditt konto nedan",
@@ -717,7 +717,7 @@ export default {
             "phone_activate_1": "En aktiveringskod har skickats till din telefon, ange den här nedan",
             "password_reset_1": "Ange din e-post nedan så vi kan skicka en återställningslänk",
             "old_ie": "Din webbläsare är för gammal, var vänlig uppdatera till <a target=\"_blank\" href=\"{link}\">IE 10<\/a>",
-            "contact_1": "Vi vill gärna höra ifrån dig! Du kan nå oss när som helst på <a href=\"mailto:support@whopp.se\">\""
+            "contact_1": "Vi vill gärna höra ifrån dig! Du kan nå oss när som helst på <a href=\"mailto:support@example.com\">\""
         },
         "language": {
             "sv_se": "Svenska",
@@ -892,7 +892,7 @@ export default {
             "price_in": "Pris i",
             "from": "från",
             "change": "Ändra",
-            "default_title": "whopp - nästa generations e-handel",
+            "default_title": "Standardtitel",
             "street": "Gata",
             "street_number": "Gatunummer",
             "zipcode": "Postnummer",
