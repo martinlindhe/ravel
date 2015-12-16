@@ -6,10 +6,15 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/martinlindhe/ubique.se/db"
 	"github.com/martinlindhe/ubique.se/dotenv"
 	"github.com/martinlindhe/ubique.se/migration"
+	"github.com/martinlindhe/ubique.se/router"
 	"github.com/martinlindhe/ubique.se/seed"
-	"github.com/martinlindhe/ubique.se/server"
+	"github.com/nicksnyder/go-i18n/i18n"
+
+	//"github.com/martinlindhe/ubique.se/tpl"
+	//_ "github.com/martinlindhe/ubique.se/tpl/layout"
 )
 
 func bootstrap() {
@@ -18,6 +23,8 @@ func bootstrap() {
 		log.Fatal("Error loading .env file", err)
 		os.Exit(1)
 	}
+
+	i18n.MustLoadTranslationFile("resources/lang/en-US.yaml")
 }
 
 func main() {
@@ -30,7 +37,7 @@ func main() {
 	dbHost := dotenv.Get("DB_HOST", "localhost")
 	dbPort := dotenv.GetInt("DB_PORT", 3306)
 
-	db, err := db.InitDB(dbHost, dbPort, dbUser, dbPass, dbName)
+	db, err := db.Init("mysql", dbHost, dbPort, dbUser, dbPass, dbName)
 	if err != nil {
 		log.Fatalf("Error connecting to database: %s\n", err)
 		os.Exit(1)
@@ -46,7 +53,9 @@ func main() {
 
 	fmt.Println(db)
 
-	routes := server.InitRoutes()
+	r := router.Init()
 
-	routes.Run(":8080") // listen and serve on 0.0.0.0:8080
+	//	r.GET("/", tpl.Index)
+
+	r.Run(":8080") // listen and serve on 0.0.0.0:8080
 }

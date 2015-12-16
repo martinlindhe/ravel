@@ -6,6 +6,7 @@ web router framework: github.com/gin-gonic/gin
 orm db driver: github.com/jinzhu/gorm
 dotfile: github.com/joho/godotenv
 gorazor: razor template engine, github.com/sipin/gorazor
+i18n (json, tar för mkt plats... yml vore bättre isf!): github.com/nicksnyder/go-i18n
 
 STATUS: private
 
@@ -14,10 +15,12 @@ STATUS: private
 
 Run the watcher to generate views on the fly:
 
-    gorazor -watch tpl views
+    gorazor -watch resources/views views
 
 
 # TODO
+
+- translations
 
 - få gorazor att funka. eller snarare fatta hur man ska göra!
 
@@ -26,6 +29,10 @@ Run the watcher to generate views on the fly:
 - use elixir for js, sass .... !!!
 
 - views: blade liknande. gorazor https://github.com/sipin/gorazor
+
+CLI APP:
+    - liknande artisan
+    - "migrate:seed --refresh", etc
 
 
 tests:
