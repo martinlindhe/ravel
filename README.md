@@ -22,14 +22,12 @@ Run the watcher to generate views on the fly:
 
 # TODO
 
-- få gorazor att funka. eller snarare fatta hur man ska göra!
+- check out https://github.com/jteeuwen/go-bindata
 
-- kolla in https://github.com/jteeuwen/go-bindata
+- jwt: https://github.com/dgrijalva/jwt-go
 
-- views: blade liknande. gorazor https://github.com/sipin/gorazor
-
-CLI APP:
-    - liknande artisan
+# TODO cli app
+    - something similar to artisan
     - "migrate:seed --refresh", etc
 
 
@@ -37,21 +35,19 @@ tests:
     - route test!?
 
 - migrations important!
-    - borde vara ett eget lib baserat på gorm
-    - eget textformat med migrations?
-    - kunna byta namn på kolumn, tabell
+    - should be its own go package, based on gorm
+    - come up with some yaml-syntax for declaring migrations, rather than in code (more terse)
+    - needs to be able to change column name, table name
     - keep migrations table, if we do manual migrations.. !?
-    - hook up manual migration files, like in laravel. solution exists? proper migration stuff, google some?!
-
-
-# ASSETS
-    - sass compiler i go: https://github.com/c9s/c6
+    - hook up manual migration files, like in laravel. solution exists?
 
 
 
-# SENARE
 
-- faker lib, använder jag knappt ... https://github.com/icrowley/fake
+# LATER
+
+- faker lib integrated with gorm. i barely use fakes, but they are nice to have... https://github.com/icrowley/fake
+- sass compiler i go: https://github.com/c9s/c6
 
 # STATUS
 
