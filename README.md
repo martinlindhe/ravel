@@ -20,13 +20,9 @@ Run the watcher to generate views on the fly:
 
 # TODO
 
-- translations
-
 - få gorazor att funka. eller snarare fatta hur man ska göra!
 
 - kolla in https://github.com/jteeuwen/go-bindata
-
-- use elixir for js, sass .... !!!
 
 - views: blade liknande. gorazor https://github.com/sipin/gorazor
 

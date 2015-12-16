@@ -12,6 +12,7 @@ import (
 	"github.com/martinlindhe/ubique.se/router"
 	"github.com/martinlindhe/ubique.se/seed"
 	"github.com/nicksnyder/go-i18n/i18n"
+	"github.com/sipin/gorazor/docs/hello/src/tpl"
 
 	//"github.com/martinlindhe/ubique.se/tpl"
 	//_ "github.com/martinlindhe/ubique.se/tpl/layout"
@@ -55,7 +56,7 @@ func main() {
 
 	r := router.Init()
 
-	//	r.GET("/", tpl.Index)
+	r.GET("/", tpl.Index)
 
 	r.Run(":8080") // listen and serve on 0.0.0.0:8080
 }

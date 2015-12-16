@@ -1,5 +1,5 @@
 watch:
-	gorazor -watch tpl tpl
+	gorazor -watch views views
 
 deps:
 	npm install
