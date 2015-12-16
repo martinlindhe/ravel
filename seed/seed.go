@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/jinzhu/gorm"
-	"github.com/martinlindhe/ubique.se/model"
-	"github.com/martinlindhe/ubique.se/password"
+	"github.com/martinlindhe/ravel/model"
+	"github.com/martinlindhe/ravel/password"
 )
 
 func Seed(db *gorm.DB) {

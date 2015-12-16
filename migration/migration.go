@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/jinzhu/gorm"
-	"github.com/martinlindhe/ubique.se/model"
+	"github.com/martinlindhe/ravel/model"
 )
 
 // XXX function that ROLLS BACK all migrations

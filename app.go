@@ -7,12 +7,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/martinlindhe/ubique.se/db"
-	"github.com/martinlindhe/ubique.se/dotenv"
-	"github.com/martinlindhe/ubique.se/migration"
-	"github.com/martinlindhe/ubique.se/router"
-	"github.com/martinlindhe/ubique.se/seed"
-	"github.com/martinlindhe/ubique.se/views"
+	"github.com/martinlindhe/ravel/db"
+	"github.com/martinlindhe/ravel/env"
+	"github.com/martinlindhe/ravel/migration"
+	"github.com/martinlindhe/ravel/router"
+	"github.com/martinlindhe/ravel/seed"
+	"github.com/martinlindhe/ravel/views"
 	"github.com/nicksnyder/go-i18n/i18n"
 )
 
@@ -30,11 +30,13 @@ func main() {
 
 	bootstrap()
 
-	dbUser := dotenv.Get("DB_USER", "user")
-	dbPass := dotenv.Get("DB_PASS", "pass")
-	dbName := dotenv.Get("DB_NAME", "ubique")
-	dbHost := dotenv.Get("DB_HOST", "localhost")
-	dbPort := dotenv.GetInt("DB_PORT", 3306)
+	dbUser := env.Get("DB_USER", "user")
+	dbPass := env.Get("DB_PASS", "pass")
+	dbName := env.Get("DB_NAME", "ubique")
+	dbHost := env.Get("DB_HOST", "localhost")
+	dbPort := env.GetInt("DB_PORT", 3306)
+
+	appPort := env.GetInt("APP_PORT", 8080)
 
 	db, err := db.Init("mysql", dbHost, dbPort, dbUser, dbPass, dbName)
 	if err != nil {
@@ -62,5 +64,8 @@ func main() {
 		c.String(200, views.Index())
 	})
 
-	r.Run(":8080") // listen and serve on 0.0.0.0:8080
+	// listen and serve on 0.0.0.0:8080
+	listenAt := fmt.Sprintf(":%d", appPort)
+
+	r.Run(listenAt)
 }

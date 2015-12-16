@@ -5,4 +5,4 @@ deps:
 	npm install
 
 serve:
-	go run server.go
+	go run app.go

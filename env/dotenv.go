@@ -1,4 +1,4 @@
-package dotenv
+package env
 
 import (
 	"log"
@@ -9,7 +9,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// Load initializes the dotenv
+// Load initializes the dotenv files
 func Load(fileNames ...string) error {
 
 	return godotenv.Load(fileNames...)
