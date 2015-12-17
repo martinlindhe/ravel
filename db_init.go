@@ -24,6 +24,8 @@ func InitDB() (gorm.DB, error) {
 		return db, err
 	}
 
+	db.Set("gorm:table_options", "ENGINE=InnoDB")
+
 	// Open doesn't open a connection. Validate DSN data:
 	err = db.DB().Ping()
 	if err != nil {

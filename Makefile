@@ -9,3 +9,6 @@ serve:
 
 ping:
 	curl "http://localhost:8080/ping"
+
+lint:
+	find ./db/migrations -name '*.yml' -print0 | xargs -0 -n1 js-yaml

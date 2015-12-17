@@ -13,6 +13,11 @@ i18n: github.com/nicksnyder/go-i18n
 STATUS: experimental
 
 
+# Migrations
+
+Uses gorm migration features, see migrations folder for examples
+
+
 # Views
 
 Run the watcher to generate views on the fly:
